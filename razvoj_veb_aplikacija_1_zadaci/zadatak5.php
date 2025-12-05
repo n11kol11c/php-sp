@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadatak 4 - Razvoj Veb Aplikacija</title>
+    <title>Zadatak 5 - Razvoj Veb Aplikacija</title>
 </head>
 <body>
     <?php
