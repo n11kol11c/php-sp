@@ -6,7 +6,7 @@
     <title>Razvoj Veb Aplikacija I</title>
 </head>
 <body>
-    <!-- Prikazati ucenike kroz tabeul kombinacija php-a foreach petlje i html-a -->
+    <!-- Prikazati ucenike kroz tabelu kombinacija php-a foreach petlje i html-a -->
 
     <?php
         $ocjene = array("Ivan" => array("Maternji" => 4,
