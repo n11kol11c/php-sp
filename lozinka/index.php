@@ -1,13 +1,13 @@
 <?php
-$ime = $lozinka = $potvrda = "";
-$ime_error = $lozinka_error = $potvrda_error = "";
+    $ime = $lozinka = $potvrda = "";
+    $ime_error = $lozinka_error = $potvrda_error = "";
 
-function provjeri_podatke($podatak) {
-    $podatak = trim($podatak);
-    $podatak = htmlspecialchars($podatak);
-    $podatak = stripslashes($podatak);
-    return $podatak;
-}
+    function provjeri_podatke($podatak) {
+        $podatak = trim($podatak);
+        $podatak = htmlspecialchars($podatak);
+        $podatak = stripslashes($podatak);
+        return $podatak;
+    }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($_POST["ime"])) {
@@ -49,10 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Form Validation</title>
+<title>Lozinka</title>
 <style>
-.success { color: green; }
-.error { color: red; }
+    .success { color: green; }
+    .error { color: red; }
 </style>
 </head>
 <body>
@@ -61,28 +61,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input type="text" name="ime" placeholder="Unesite korisnicko ime" value="<?php echo $ime; ?>">
     <span class="error"><?php echo $ime_error; ?></span>
     <br>
-
     <label>Lozinka:</label>
     <input type="password" name="lozinka" placeholder="Unesite lozinku">
     <span class="error"><?php echo $lozinka_error; ?></span>
     <br>
-
     <label>Ponovite lozinku:</label>
     <input type="password" name="potvrda" placeholder="Potvrdite lozinku">
     <span class="error"><?php echo $potvrda_error; ?></span>
     <br>
-
     <input type="submit" value="Posalji">
 </form>
-
 <?php
-if ($_SERVER['REQUEST_METHOD'] === "POST" &&
-    empty($ime_error) && empty($lozinka_error) && empty($potvrda_error)) {
-    echo "<h2>Login</h2>";
-    echo "<p class='success'>Korisnicko ime: $ime</p>";
-    echo "<p class='success'>Lozinka: $lozinka</p>";
-    echo "<p class='success'>Potvrda lozinke: $potvrda</p>";
-}
+    if ($_SERVER['REQUEST_METHOD'] === "POST" &&
+        empty($ime_error) && 
+        empty($lozinka_error) && 
+        empty($potvrda_error)) {
+        echo "<h2>Login</h2>";
+        echo "<p class='success'>Korisnicko ime: $ime</p>";
+        echo "<p class='success'>Lozinka: $lozinka</p>";
+        echo "<p class='success'>Potvrda lozinke: $potvrda</p>";
+    }
 ?>
 </body>
 </html>
