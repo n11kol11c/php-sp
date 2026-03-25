@@ -14,14 +14,14 @@ abstract class Proizvod {
 }
 
 class Hrana extends Proizvod implements Narudzbina {
-    private static float $popust = 0.10;
+    private const float POPUST = 0.10;
 
     public function __construct(string $naziv, float $osnovnaCena) {
         parent::__construct($naziv, $osnovnaCena);
     }
 
     public function izracunaj(): float {
-        return $this->osnovnaCena * (1 - self::$popust);
+        return $this->osnovnaCena * (1 - self::POPUST);
     }
 
     public function __toString(): string {
