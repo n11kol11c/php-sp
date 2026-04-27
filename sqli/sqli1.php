@@ -39,8 +39,13 @@
     mysqli_query($conn, $sql_backend);
 
     mysqli_query($conn, "INSERT INTO frontend (ime,prezime,godine,plata)
-        VALUES
-        ('Milan','Petrovic',28,3000.0),
+        VALUES('Milan','Petrovic',28,3000.0),
+        ('Jelena','Markovic',25,8000.0),
+        ('Ana','Nikolic',30,2000.0)
+    ");
+
+    mysqli_query($conn, "INSERT INTO backend (ime,prezime,godine,plata)
+        VALUES('Milan','Petrovic',28,3000.0),
         ('Jelena','Markovic',25,8000.0),
         ('Ana','Nikolic',30,2000.0)
     ");
